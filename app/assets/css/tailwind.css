@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles and animations */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved gradient text animation with better performance */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Improve performance */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Optimized typewriter effect for mobile */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #667eea;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 2.5s steps(25, end), blink-caret 0.8s step-end infinite;
+  /* Mobile optimization */
+  max-width: 100%;
+  word-break: break-all;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #667eea }
+}
+
+/* Performance-optimized animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -10px, 0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+  /* Performance boost */
+  transform: translateZ(0);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+  /* Reduce animation on mobile for better performance */
+  @media (max-width: 768px) {
+    animation-duration: 6s;
+  }
+}
+
+/* Enhanced custom scrollbar with mobile consideration */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+}
+
+/* Selection color with better contrast */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: inherit;
+}
+
+::-moz-selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: inherit;
+}
+
+/* Enhanced focus styles for accessibility */
+.focus-ring:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+  ring: 2px;
+  ring-color: #667eea;
+  ring-opacity: 0.5;
+}
+
+/* Optimized glass morphism with performance */
+.glass {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  /* Performance optimization */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.glass-light {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(8px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text,
+  .typewriter,
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-float {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .typewriter {
+    border-right: none;
+    animation: none;
+    width: auto;
+  }
+}
+
+/* Mobile-first responsive improvements */
+@media (max-width: 640px) {
+  .typewriter {
+    font-size: 1.5rem;
+    animation-duration: 2s;
+  }
+  
+  .gradient-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .gradient-text {
+    background: none;
+    -webkit-text-fill-color: #667eea;
+    color: #667eea;
+  }
+  
+  .glass, .glass-light {
+    background: white;
+    backdrop-filter: none;
+    border: 1px solid #e2e8f0;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient-text {
+    background: none;
+    -webkit-text-fill-color: #0000ff;
+    color: #0000ff;
+  }
+}
+
+/* Optimized smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Performance: only transform what's necessary */
+.transform-target {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Dark mode transitions */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hover-effect:hover {
+    transform: none;
+  }
+  
+  /* Increase tap target sizes for mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
