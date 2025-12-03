@@ -114,16 +114,16 @@
 
 <script setup>
 const projects = [
-  {
-    id: 1,
-    title: 'Commmerce Landing Page',
-    description: 'Company Landing page with email hosting and SEO optimization.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    technologies: ['Vue.js', 'Nuxt', 'Node.js'],
-    status: 'Live',
-    demoUrl: 'https://merdekanetwork.com/',
-    githubUrl: '#'
-  }
+  // {
+  //   id: 1,
+  //   title: 'Commmerce Landing Page',
+  //   description: 'Company Landing page with email hosting and SEO optimization.',
+  //   image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+  //   technologies: ['Vue.js', 'Nuxt', 'Node.js'],
+  //   status: 'Live',
+  //   demoUrl: 'https://merdekanetwork.com/',
+  //   githubUrl: '#'
+  // }
 ]
 
 const getStatusClass = (status) => {
