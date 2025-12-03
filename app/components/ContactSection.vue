@@ -1,25 +1,25 @@
 <template>
   <section id="contact" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-900">
-    <div class="container mx-auto px-4 sm:px-6"> <!-- MODIFY: Responsive padding -->
+    <div class="container mx-auto px-4 sm:px-6"> <!--MODIFY: Responsive padding -->
       <div class="max-w-6xl mx-auto">
-        <!-- Section Header -->
-        <div class="text-center mb-12 md:mb-16"> <!-- MODIFY: Responsive margin -->
-          <!-- MODIFY: Responsive font sizes -->
+        <!--Section Header -->
+        <div class="text-center mb-12 md:mb-16"> <!--MODIFY: Responsive margin -->
+          <!--MODIFY: Responsive font sizes -->
           <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 text-slate-900 dark:text-white">
             Let's <span class="gradient-text">Connect</span>
           </h2>
-          <!-- MODIFY: Responsive text size and padding -->
+          <!--MODIFY: Responsive text size and padding -->
           <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
             Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start"> <!-- MODIFY: Responsive gap -->
-          <!-- Contact Information -->
-          <div class="space-y-6 md:space-y-8"> <!-- MODIFY: Responsive spacing -->
-            <!-- Introduction -->
-            <div class="space-y-3 md:space-y-4"> <!-- MODIFY: Responsive spacing -->
-              <!-- MODIFY: Responsive text sizes -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start"> <!--MODIFY: Responsive gap -->
+          <!--Contact Information -->
+          <div class="space-y-6 md:space-y-8"> <!--MODIFY: Responsive spacing -->
+            <!--Introduction -->
+            <div class="space-y-3 md:space-y-4"> <!--MODIFY: Responsive spacing -->
+              <!--MODIFY: Responsive text sizes -->
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
                 Get In Touch
               </h3>
@@ -29,20 +29,20 @@
               </p>
             </div>
 
-            <!-- Contact Methods -->
-            <div class="space-y-3 md:space-y-4"> <!-- MODIFY: Responsive spacing -->
+            <!--Contact Methods -->
+            <div class="space-y-3 md:space-y-4"> <!--MODIFY: Responsive spacing -->
               <div 
                 v-for="contact in contactMethods"
                 :key="contact.type"
                 class="flex items-center space-x-3 md:space-x-4 p-4 md:p-6 bg-white dark:bg-slate-800 rounded-xl md:rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-all duration-300 group cursor-pointer hover:shadow-lg"
                 @click="handleContactClick(contact)"
               >
-                <!-- MODIFY: Responsive icon container -->
+                <!--MODIFY: Responsive icon container -->
                 <div class="w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg md:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <span class="text-white text-base md:text-xl">{{ contact.icon }}</span>
                 </div>
-                <div class="flex-1 min-w-0"> <!-- MODIFY: Prevent text overflow -->
-                  <!-- MODIFY: Responsive text sizes -->
+                <div class="flex-1 min-w-0"> <!--MODIFY: Prevent text overflow -->
+                  <!--MODIFY: Responsive text sizes -->
                   <h3 class="font-semibold text-slate-900 dark:text-white text-base md:text-lg truncate">
                     {{ contact.type }}
                   </h3>
@@ -50,7 +50,7 @@
                     {{ contact.value }}
                   </p>
                 </div>
-                <!-- MODIFY: Responsive arrow icon -->
+                <!--MODIFY: Responsive arrow icon -->
                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:translate-x-1 flex-shrink-0">
                   <svg class="w-4 h-4 md:w-5 md:h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -59,9 +59,9 @@
               </div>
             </div>
 
-            <!-- Social Links -->
-            <div class="pt-4 md:pt-6"> <!-- MODIFY: Responsive padding -->
-              <!-- MODIFY: Responsive text size -->
+            <!--Social Links -->
+            <div class="pt-4 md:pt-6"> <!--MODIFY: Responsive padding -->
+              <!--MODIFY: Responsive text size -->
               <h4 class="text-base md:text-lg font-semibold text-slate-900 dark:text-white mb-3 md:mb-4">Follow my work</h4>
               <div class="flex space-x-3 md:space-x-4">
                 <a 
@@ -71,22 +71,22 @@
                   class="w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg md:rounded-xl flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110 group"
                   :title="social.name"
                 >
-                  <!-- MODIFY: Responsive icon size -->
+                  <!--MODIFY: Responsive icon size -->
                   <span class="text-lg md:text-xl">{{ social.icon }}</span>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <!-- MODIFY: Responsive padding and rounding -->
-          <div class="bg-white dark:bg-slate-800 rounded-2xl md:rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all duration-300">
-            <!-- MODIFY: Responsive text sizes -->
+          <!--Contact Form -->
+          <!--MODIFY: Responsive padding and rounding -->
+          <!--<div class="bg-white dark:bg-slate-800 rounded-2xl md:rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl transition-all duration-300">
+            MODIFY: Responsive text sizes 
             <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-2">Send a Message</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base mb-6 md:mb-8">Let's start a conversation about your project</p>
             
-            <form @submit.prevent="handleSubmit" class="space-y-4 md:space-y-6"> <!-- MODIFY: Responsive spacing -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"> <!-- MODIFY: Responsive gap -->
+            <form @submit.prevent="handleSubmit" class="space-y-4 md:space-y-6"> 
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"> >
                 <div class="space-y-2">
                   <label class="text-slate-700 dark:text-slate-300 text-xs md:text-sm font-semibold">Full Name *</label>
                   <input 
@@ -144,7 +144,7 @@
                 <span>{{ form.loading ? 'Sending...' : 'Send Message' }}</span>
               </button>
 
-              <!-- Success Message -->
+              
               <div 
                 v-if="form.success"
                 class="p-3 md:p-4 bg-green-500/10 border border-green-500/20 rounded-lg md:rounded-xl text-green-600 dark:text-green-400 text-center animate-fade-in text-sm md:text-base"
@@ -157,7 +157,7 @@
                 </div>
               </div>
 
-              <!-- Error Message -->
+              
               <div 
                 v-if="form.error"
                 class="p-3 md:p-4 bg-red-500/10 border border-red-500/20 rounded-lg md:rounded-xl text-red-600 dark:text-red-400 text-center animate-fade-in text-sm md:text-base"
@@ -170,7 +170,7 @@
                 </div>
               </div>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
