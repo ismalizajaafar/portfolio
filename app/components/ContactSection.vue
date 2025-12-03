@@ -60,7 +60,7 @@
             </div>
 
             <!--Social Links -->
-            <div class="pt-4 md:pt-6"> <!--MODIFY: Responsive padding -->
+            <div class="text-center mb-12 md:mb-16"> <!--MODIFY: Responsive padding -->
               <!--MODIFY: Responsive text size -->
               <h4 class="text-base md:text-lg font-semibold text-slate-900 dark:text-white mb-3 md:mb-4">Follow my work</h4>
               <div class="flex space-x-3 md:space-x-4">
