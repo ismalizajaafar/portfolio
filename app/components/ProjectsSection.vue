@@ -72,7 +72,7 @@
               <!-- Project Links -->
               <!-- MODIFY: Responsive layout and sizing -->
               <div class="flex flex-col sm:flex-row gap-3 md:gap-4"> <!-- MODIFY: Stack on mobile -->
-                <button 
+                <!-- <button 
                   class="flex-1 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-4 py-2 md:px-6 md:py-3 rounded-lg md:rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2 md:space-x-3 group/link text-sm md:text-base"
                   @click="openDemo(project.demoUrl)"
                 >
@@ -80,7 +80,7 @@
                   <svg class="w-3 h-3 md:w-4 md:h-4 transform group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
-                </button>
+                </button> -->
                 <!-- <button 
                   class="flex-1 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-4 py-2 md:px-6 md:py-3 rounded-lg md:rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center space-x-2 md:space-x-3 group/link text-sm md:text-base"
                   @click="openGithub(project.githubUrl)"
